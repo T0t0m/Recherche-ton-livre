@@ -1,0 +1,283 @@
+/* ============================= */
+/*         Styles de base       */
+/* ============================= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #33333f;
+    color: #ccc;
+}
+
+/* ============================= */
+/*         Titre de page        */
+/* ============================= */
+.title {
+    color: #fff;
+    text-align: center;
+}
+
+/* ============================= */
+/*     Conteneur du formulaire    */
+/* ============================= */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* ============================= */
+/*       Styles des inputs       */
+/* ============================= */
+.input, .button, .dropdown-toggle {
+    border: 3px solid #66666f;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    margin: 5px;
+}
+
+.input {
+    background-color: #dddddf;
+    color: #666;
+}
+
+/* Changement de couleur du texte lorsque l'input a du texte */
+#searchBook {
+    transition: color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+#searchBook:not(:placeholder-shown) {
+    color: #333; /* Couleur du texte plus foncée */
+}
+
+/* ============================= */
+/*        Menu déroulant        */
+/* ============================= */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    color: #333;
+}
+
+.dropdown-toggle:hover {
+    background-color: #99999f;
+    color: #333;
+}
+
+.dropdown-content {
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.dropdown-content label {
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+    color: #555;
+}
+
+.dropdown-content label:hover {
+    background-color: #f1f1f1;
+}
+
+/* Affiche le menu lorsque le parent a la classe 'show' */
+.dropdown.show .dropdown-content {
+    display: block;
+}
+
+/* ============================= */
+/*          Boutons             */
+/* ============================= */
+.button {
+    background-color: #99999f;
+    cursor: pointer;
+    color: #222;
+}
+
+.button:hover {
+    background-color: #77777f;
+}
+
+.toggle-synopsis-btn, .see-less-btn {
+    width: 100%;
+    background-color: #66a;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px auto;
+    display: block;
+    text-align: left;
+    text-decoration: underline;
+    font-size: inherit;
+}
+
+.toggle-synopsis-btn {
+    width: calc(100% - 20px);
+}
+
+/* Styles pour le bouton "Aperçu" */
+.preview {
+    background-color: #8587b6; /* Couleur de fond verte */
+    color: white; /* Couleur du texte blanche */
+    border: none; /* Pas de bordure */
+    padding: 10px 15px; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Pas de soulignement */
+    display: inline-block; /* Pour que le bouton se comporte comme un bouton */
+    font-size: 16px; /* Taille de police */
+    margin: 10px 0; /* Marge */
+    cursor: pointer; /* Curseur en forme de main */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
+}
+
+/* Changement de couleur au survol du bouton "Aperçu" */
+.preview:hover {
+    background-color: #2b35e5; /* Couleur de fond plus foncée au survol */
+}
+
+/* Effet au survol des boutons */
+.toggle-synopsis-btn:hover, .see-less-btn:hover {
+    background-color: #0056b3;
+}
+
+/* ============================= */
+/*        Conteneur des livres    */
+/* ============================= */
+#books {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* ============================= */
+/*         Cartes des livres     */
+/* ============================= */
+.book-card {
+    border: 3px solid #aaa;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0;
+    width: calc(100% - 40px);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* Styles pour l'image du livre dans la carte */
+.book-card img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+/* Conteneur pour les informations du livre */
+.book-info {
+    flex: 1;
+}
+
+/* Styles pour le titre et le score du livre */
+.book-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.book-score {
+    font-weight: bold;
+}
+
+/* Styles pour les informations complémentaires */
+.book-type, .book-pages, .book-status, .book-published {
+    margin: 5px 0;
+}
+
+/* Style pour la synopsis */
+.book-synopsis {
+    font-style: italic;
+    color: #999;
+}
+
+/* ============================= */
+/*        Lien vers les livres    */
+/* ============================= */
+.book-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.book-link:hover {
+    text-decoration: underline;
+}
+
+/* ============================= */
+/*      Style de chargement      */
+/* ============================= */
+#loading {
+    color: #ccc;
+    font-weight: bold;
+}
+
+/* ============================= */
+/*      Styles des messages      */
+/* ============================= */
+.error {
+    color: #ff0000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ============================= */
+/*      Media queries           */
+/* ============================= */
+@media (max-width: 768px) {
+    .book-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .book-card img {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .book-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        margin: 10px;
+    }
+
+    .book-title {
+        font-size: 18px;
+    }
+
+    .toggle-synopsis-btn {
+        padding: 8px;
+    }
+}

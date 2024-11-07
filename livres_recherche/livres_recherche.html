@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rechercher des livres via l'API de Google Books">
+    <title>Recherche de Livres</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+    <script src="livres_recherche.js" defer></script> <!-- Lien vers le fichier JS -->
+</head>
+
+<body>
+    <h1 class="title">Trouve ton livre</h1>
+
+    <div class="form-container">
+        <form id="bookForm">
+            <input class="input" type="text" id="searchBook" placeholder="Rechercher un livre">
+
+            <!-- Bouton pour afficher/masquer le menu déroulant -->
+            <div class="dropdown">
+                <button type="button" class="dropdown-toggle">Sélectionner des genres</button>
+                <div class="dropdown-content">
+                    <label><input type="checkbox" class="genre" value="fiction"> Fiction</label>
+                    <label><input type="checkbox" class="genre" value="non-fiction"> Non-fiction</label>
+                    <label><input type="checkbox" class="genre" value="fantasy"> Fantasy</label>
+                    <label><input type="checkbox" class="genre" value="science-fiction"> Science fiction</label>
+                    <label><input type="checkbox" class="genre" value="mystery"> Mystery</label>
+                    <label><input type="checkbox" class="genre" value="thriller"> Thriller</label>
+                    <label><input type="checkbox" class="genre" value="romance"> Romance</label>
+                    <label><input type="checkbox" class="genre" value="biography"> Biography / Autobiography</label>
+                    <label><input type="checkbox" class="genre" value="history"> History</label>
+                    <label><input type="checkbox" class="genre" value="children"> Children's books</label>
+                    <label><input type="checkbox" class="genre" value="young-adult"> Young adult</label>
+                    <label><input type="checkbox" class="genre" value="self-help"> Self-help</label>
+                    <label><input type="checkbox" class="genre" value="cookbooks"> Cookbooks</label>
+                    <label><input type="checkbox" class="genre" value="travel"> Travel</label>
+                    <label><input type="checkbox" class="genre" value="graphic-novels"> Graphic novels</label>
+                    <label><input type="checkbox" class="genre" value="poetry"> Poetry</label>
+                    <label><input type="checkbox" class="genre" value="religion"> Religion</label>
+                    <label><input type="checkbox" class="genre" value="science-nature"> Science & Nature</label>
+                    <label><input type="checkbox" class="genre" value="comics"> Comics</label>
+                    <label><input type="checkbox" class="genre" value="classic-literature"> Classic literature</label>
+                    <label><input type="checkbox" class="genre" value="philosophy"> Philosophy</label>
+                    <label><input type="checkbox" class="genre" value="art"> Art</label>
+                    <label><input type="checkbox" class="genre" value="business"> Business</label>
+                    <label><input type="checkbox" class="genre" value="computers"> Computers</label>
+                    <label><input type="checkbox" class="genre" value="health-fitness"> Health & Fitness</label>
+                    <label><input type="checkbox" class="genre" value="law"> Law</label>
+                    <label><input type="checkbox" class="genre" value="music"> Music</label>
+                    <label><input type="checkbox" class="genre" value="psychology"> Psychology</label>
+                    <label><input type="checkbox" class="genre" value="social-science"> Social Science</label>
+                    <label><input type="checkbox" class="genre" value="sports"> Sports</label>
+                    <label><input type="checkbox" class="genre" value="true-crime"> True Crime</label>
+                    <label><input type="checkbox" class="genre" value="education"> Education</label>
+                </div>
+            </div>
+
+            <button class="button" id="search">Rechercher</button>
+        </form>
+
+        <p id="loading" style="display: none;">Chargement en cours... Veuillez patienter...</p>
+        <p class="error" style="display: none;"></p>
+    </div>
+
+    <!-- Conteneur pour les messages de recherche et le nombre de résultats -->
+    <div id="searchMessage"></div>
+    <div id="resultsCount"></div>
+
+    <!-- Conteneur pour les cartes des livres -->
+    <div id="books"></div>
+</body>
+
+</html>
